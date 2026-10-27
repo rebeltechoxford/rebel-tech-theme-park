@@ -31,3 +31,11 @@
 - **Owner handoff:** `scripts/open_toolkit_upload.ps1` launched the official Frontier website and the local ZIP/preview folder on Raven. Steam sign-in/online conversion is still outstanding.
 - **Disk check after setup:** C: 22.51 GiB free; D: 316.68 GiB free.
 - **Next:** complete Toolkit conversion and in-game save/reload test, then investigate supervised automation after the game is running.
+
+## 2026-10-27 — Owner pivots to Planet Coaster 2
+- **Decision:** owner is purchasing Planet Coaster 2 and has ended the PC1-specific import plan. Preserve PC1 prototype geometry as reusable source, but stop PC1 Toolkit conversion.
+- **Raven status:** still online; no PC2 folder found in checked common Steam locations yet (installation may be underway). No PC2 game, sandbox park or custom scenery has been tested.
+- **PC2 capabilities:** built-in coasters, scenery, parks and waterpark rides; Frontier Workshop supports in-game shared blueprints. Add proposed **Cooling Loop** water district.
+- **Custom models:** third-party **KMods Converter** claims support for Blender/FBX/GLB to PC2 scenery packs, dependent on ACSE/ForgeUtils. Installer is unsigned; no such mod has been installed or trusted automatically.
+- **Document updates:** README.md and AGENTS.md updated for PC2. New docs/PC2_PIPELINE.md describes vanilla-first plan and optional mod risk gate. PC1 docs/TMT_PIPELINE.md archived conceptually without deleting it.
+- **Next:** confirm PC2 is installed on Raven, test a vanilla sandbox save and load, then adapt original gateway into a single-object Blender/GLB source candidate. Only consider mod installation after a safety/compatibility check.
