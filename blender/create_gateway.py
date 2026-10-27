@@ -162,7 +162,7 @@ if any(a <= b for a, b in zip(counts, counts[1:])):
 bpy.ops.object.select_all(action="DESELECT")
 for obj, _ in LODS:
     obj.select_set(True)
-bpy.context.view_layer.objects.active = LODS[0]
+bpy.context.view_layer.objects.active = LODS[0][0]
 fbx_path = EXPORT / "rt_world_gateway.fbx"
 bpy.ops.export_scene.fbx(
     filepath=str(fbx_path),
