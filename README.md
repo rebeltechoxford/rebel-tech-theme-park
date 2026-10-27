@@ -2,11 +2,17 @@
 
 **Rebel Tech World** is a community creative project to design and build a playable, technology-themed amusement park in **Planet Coaster 1** on the Windows PC **Raven**.
 
-> Status: planning / repository initialized. No game build, custom asset import, or automation test has been completed yet.
+> Status (2026-10-27): **first original scenery model built and offline-validated on Raven**. Frontier Toolkit conversion, in-game placement, and playable park construction still pending.
 
 ## Vision
 
 An immersive technology-themed park inspired by Rebel Tech Oxford's **CONNECTING. INSTALLING. SOLVING.** identity: deep navy, red, white, illuminated circuits, robotics, networks, and server-room architecture. The goal is an actual playable park, not just renders, with working rides, paths, queues, shops, facilities, lighting, and scenery.
+
+### First prototype: Rebel Tech World Gateway
+
+![Blender render of the first Rebel Tech World Gateway scenery prototype](docs/images/gateway-v0.1.jpg)
+
+*Original procedural Blender preview. The FBX has six LOD meshes, passes offline validation, and is awaiting Frontier Toolkit conversion; this is not an in-game screenshot.*
 
 ### Proposed districts
 
@@ -24,9 +30,9 @@ Names, layout, and ride details are proposals subject to gameplay testing.
 ## Target environment
 
 - **Game:** Planet Coaster 1 for Windows, sandbox mode.
-- **Host PC:** Raven; verify actual hardware and installations before proceeding.
+- **Host PC:** Raven; Windows 11 Pro, inspected October 27, 2026.
 - **Workspace:** `D:\RebelTechWorld` to reduce use of C:; check capacity before setup. Game/system caches and saves may still occupy C:.
-- **3D authoring:** Existing Blender installation, version and compatibility to be verified.
+- **3D authoring:** Blender 4.5.3 LTS confirmed; Frontier's legacy guide tested Blender 2.79, so Toolkit acceptance remains to be verified.
 - **Custom scenery:** Planet Coaster's official Thememaker's Toolkit; validate its currently supported export/import workflow before automating.
 - **Automation:** Authorized local desktop controls and deterministic scripts where practical; screenshot-driven inspection and manual checkpoints.
 - **Knowledge hub:** [Rebel Tech World — Notion project hub](https://app.notion.com/p/4066b61e436e8102931fe868f8ac2ee3?pvs=204).
@@ -43,9 +49,9 @@ Names, layout, and ride details are proposals subject to gameplay testing.
 
 ## Initial milestones
 
-- [ ] Connect to Raven with permission and inspect C:/D: available space, Planet Coaster, Blender, and build prerequisites.
-- [ ] Create the local `D:\RebelTechWorld` workspace and Git clone.
-- [ ] Confirm Thememaker's Toolkit process and create a test scenery object in Blender.
+- [x] Connect to Raven with permission and inspect C:/D: available space, Planet Coaster, Blender, and build prerequisites. (C: 22.6 GiB free; D: 316.7 GiB free.)
+- [x] Create the local `D:\RebelTechWorld` workspace and Git clone.
+- [x] Create original scenery in Blender; export six FBX LODs and verify ZIP offline. Official Toolkit conversion remains untested.
 - [ ] Import the object into Planet Coaster; capture evidence of success.
 - [ ] Test reproducible UI automation for a small entrance plaza.
 - [ ] Save, close, reopen, and validate the first playable checkpoint.
@@ -64,7 +70,7 @@ rebel-tech-theme-park/
 └── .gitignore            # Local caches, saves, exports and secrets
 ```
 
-Directories and files beyond this README are planned, not present yet.
+The source Blender generator, offline validator, Windows preflight script, agent instructions, Toolkit runbook, and build log now exist. Further project folders are added as needed.
 
 ## Agent collaboration
 
