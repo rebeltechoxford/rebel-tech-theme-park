@@ -2,7 +2,7 @@
 
 **Rebel Tech World** is a community creative project to design and build a playable, technology-themed amusement park in **Planet Coaster 2** on the Windows PC **Raven**.
 
-> **Build status (2026-10-27): Planet Coaster 2 running on Raven.** Created a functioning vanilla sandbox park, built an 8m entrance avenue with a T-junction, verified guests using the path, and saved multiple local checkpoints (original, Entrance 01, Ride Test 02) with verified backups on D:. A built-in **360 Power** flat ride is placed but **CLOSED** pending a valid queue connection and power. The original custom Gateway GLB passed Blender offline validation but has **not** been imported into PC2.
+> **Build status (2026-10-27): Game CLOSED cleanly on Raven at owner's request.** Three verified PC2 park saves remain, with backups on D:. The entrance boulevard and T-junction are built; the first 360 Power ride is placed but not operational (queue connection and electricity outstanding). Separately, an original three-piece Blender entrance scenery kit has been generated, GLB round-trip validated, and published to GitHub as OFFLINE candidates, not yet imported into PC2.
 
 ## Vision
 
@@ -13,6 +13,12 @@ An immersive technology-themed park inspired by Rebel Tech Oxford's **CONNECTING
 ![Blender render of the first Rebel Tech World Gateway scenery prototype](docs/images/gateway-v0.1.jpg)
 
 *Original procedural Blender preview from the PC1 prototype. Its geometry and source assets can be adapted for PC2, but the old Toolkit ZIP is not a PC2 package. This is not an in-game screenshot.*
+
+### PC2 modular entrance scenery kit — offline model candidates
+
+![Original 3D render of Fiber Pylon, Data Core and Wayfinding Sign](docs/images/pc2-entrance-kit-v0.1.png)
+
+Generated on Raven with Blender 4.5.3: **RT Fiber Pylon** (1,496 triangles), **RT Data Core** (3,232 triangles), and **RT Wayfinding Sign** (1,996 triangles). All three GLBs passed a clean Blender import validation. The original source generator and model binaries are available at [assets/pc2/entrance-kit-v0.1](assets/pc2/entrance-kit-v0.1/README.md). **No community model import tools have been installed; the assets are not yet visible in PC2.**
 
 ### Proposed districts
 
@@ -47,6 +53,8 @@ Names, layout, and ride details are proposals subject to gameplay testing.
 5. **Protect disk space.** Keep large temporary exports on D: when configurable; do not commit installed game files or Steam assets.
 6. **Measured automation.** Prove mouse/keyboard control before assuming unattended construction is feasible.
 7. **Evidence over claims.** Label designs as proposed, work as in-progress, and tests as passed only once verified.
+
+For phased construction, see [PC2 Build Phases](docs/BUILD_PHASES.md); for the broken ride queue and power routing, see [Ride & Utilities Runbook](docs/RIDE_AND_UTILITIES_RUNBOOK.md).
 
 ## Initial milestones
 
@@ -93,7 +101,7 @@ The prior `docs/TMT_PIPELINE.md` and scripts creating `.pcugc` upload ZIPs were 
 
 ## Getting started
 
-When Raven is available, the owner can say: **"ok I'm on my pc"** to resume the setup and validation workflow. Check authorized access before operating the machine or installing anything.
+For offline scripting, design and model development, keep **Planet Coaster 2 closed** as requested. Relaunch only when an active in-game construction or validation step requires it, after checking Raven access and existing saves. Resume from the latest safe in-game checkpoint **Ride Test 02** and use [Ride & Utilities Runbook](docs/RIDE_AND_UTILITIES_RUNBOOK.md).
 
 ---
 Rebel Tech Oxford — **CONNECTING. INSTALLING. SOLVING.**
