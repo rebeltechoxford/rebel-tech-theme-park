@@ -1,0 +1,23 @@
+# Local workspaces, generated builds, and private machine data
+build/
+dist/
+exports/
+renders/
+tmp/
+temp/
+.cache/
+__pycache__/
+*.py[cod]
+*.blend1
+*.blend2
+*.pcugc
+*.fbx
+*.zip
+*.7z
+*.log
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+# Never commit installed game files, copyrighted downloads, credentials, or private local device output.
