@@ -75,6 +75,8 @@ for image in bpy.data.images:
             continue
         image.filepath = str(texture)
         image.reload()
+        # Blender 4.5 lazily populates image pixel buffers: force a read before has_data.
+        _ = len(image.pixels)
         if not image.has_data:
             missing_images.append(str(texture))
         else:
