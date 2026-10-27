@@ -2,7 +2,7 @@
 
 **Rebel Tech World** is a community creative project to design and build a playable, technology-themed amusement park in **Planet Coaster 2** on the Windows PC **Raven**.
 
-> **Active project (2026-10-27): Planet Coaster 2.** The owner pivoted from PC1 during purchase. The earlier Blender gateway prototype is preserved, but was designed around the **PC1** Toolkit format; no model has been imported into PC2 and no playable PC2 save exists yet.
+> **Active project (2026-10-27): Planet Coaster 2.** The owner pivoted from PC1. The Gateway geometry is preserved; a clean **single-object PC2 candidate GLB** was exported on Raven and passed a Blender GLB round-trip test. This is *not* proof of PC2 in-game support; no PC2 save or imported model is verified yet.
 
 ## Vision
 
@@ -54,7 +54,7 @@ Names, layout, and ride details are proposals subject to gameplay testing.
 - [x] Create the local `D:\RebelTechWorld` workspace and Git clone.
 - [x] Create original scenery in Blender; export and verify **PC1-format** FBX/ZIP offline (retained solely as reusable source).
 - [ ] Install and launch **Planet Coaster 2** on Raven; save/reload a vanilla sandbox park.
-- [ ] Produce one single-object Blender/GLB/FBX gateway asset appropriate for PC2.
+- [x] Export a single-object Blender/GLB gateway **candidate** and validate in Blender: 6,520 triangles, five materials, 7.55 × 0.86 × 5.54 m, 265,936-byte GLB; game import still outstanding.
 - [ ] Review optional community KMods Converter / ACSE / ForgeUtils for security, game-version compatibility and backups; test custom scenery only if approved.
 - [ ] Test reproducible UI automation for a small entrance plaza.
 - [ ] Save, close, reopen, and validate the first playable checkpoint.
