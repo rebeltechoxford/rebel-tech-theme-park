@@ -1,4 +1,5 @@
 # Rebel Tech World — Planet Coaster 2
+> **OWNER REVISION: THE REBEL GRID (2026-10-27).** The latest owner brief supersedes earlier tropical, grassy and cyan art direction: charcoal/navy grid city; RED #E10616, BLUE #244CFF, PURE WHITE #FFFFFF streetlights; no visible grass inside completed themed areas; original RT branding, custom facility shells and three matching workshop vans. Read [the current master plan](docs/REBEL_GRID_MASTERPLAN.md) and [validated offline asset kit](assets/pc2/rebel-grid-v1/README.md). Native billboard images are staged, but assigned in-game logos, custom vans and the new flagship coaster lineup are NOT verified complete. Respect active desktop coordination leases and preserve other agents' uncommitted work.
 
 **Rebel Tech World** is a community creative project to design and build a playable, technology-themed amusement park in **Planet Coaster 2** on the Windows PC **Raven**.
 

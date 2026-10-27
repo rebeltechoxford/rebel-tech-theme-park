@@ -1,0 +1,127 @@
+{
+  "status": "OFFLINE_BLENDER_GLTF_PASS_NOT_NATIVE_PC2_CONTENT",
+  "assets": [
+    {
+      "name": "rt_mobile_workshop_van",
+      "triangles": 5728,
+      "dimensions_m": [
+        6.935,
+        2.487,
+        3.36
+      ],
+      "file": "rt_mobile_workshop_van.glb",
+      "bytes": 1172076,
+      "status": "OFFLINE_EXPORTED_NOT_IMPORTED_IN_PC2",
+      "blender_roundtrip": "PASS"
+    },
+    {
+      "name": "rt_pure_white_streetlight",
+      "triangles": 444,
+      "dimensions_m": [
+        1.55,
+        0.6,
+        5.16
+      ],
+      "file": "rt_pure_white_streetlight.glb",
+      "bytes": 34488,
+      "status": "OFFLINE_EXPORTED_NOT_IMPORTED_IN_PC2",
+      "blender_roundtrip": "PASS"
+    },
+    {
+      "name": "rt_large_grid_paving_module",
+      "triangles": 72,
+      "dimensions_m": [
+        12.0,
+        12.0,
+        0.174
+      ],
+      "file": "rt_large_grid_paving_module.glb",
+      "bytes": 8720,
+      "status": "OFFLINE_EXPORTED_NOT_IMPORTED_IN_PC2",
+      "blender_roundtrip": "PASS"
+    },
+    {
+      "name": "rt_shell_food",
+      "triangles": 482,
+      "dimensions_m": [
+        6.1,
+        5.288,
+        3.995
+      ],
+      "file": "rt_shell_food.glb",
+      "bytes": 123592,
+      "status": "OFFLINE_EXPORTED_NOT_IMPORTED_IN_PC2",
+      "blender_roundtrip": "PASS"
+    },
+    {
+      "name": "rt_shell_cafe",
+      "triangles": 482,
+      "dimensions_m": [
+        6.1,
+        5.288,
+        4.345
+      ],
+      "file": "rt_shell_cafe.glb",
+      "bytes": 130724,
+      "status": "OFFLINE_EXPORTED_NOT_IMPORTED_IN_PC2",
+      "blender_roundtrip": "PASS"
+    },
+    {
+      "name": "rt_shell_toilets",
+      "triangles": 482,
+      "dimensions_m": [
+        6.1,
+        5.288,
+        3.995
+      ],
+      "file": "rt_shell_toilets.glb",
+      "bytes": 133280,
+      "status": "OFFLINE_EXPORTED_NOT_IMPORTED_IN_PC2",
+      "blender_roundtrip": "PASS"
+    },
+    {
+      "name": "rt_shell_shop",
+      "triangles": 482,
+      "dimensions_m": [
+        6.1,
+        5.288,
+        4.345
+      ],
+      "file": "rt_shell_shop.glb",
+      "bytes": 131024,
+      "status": "OFFLINE_EXPORTED_NOT_IMPORTED_IN_PC2",
+      "blender_roundtrip": "PASS"
+    },
+    {
+      "name": "rt_shell_restaurant",
+      "triangles": 482,
+      "dimensions_m": [
+        7.5,
+        5.288,
+        3.995
+      ],
+      "file": "rt_shell_restaurant.glb",
+      "bytes": 125700,
+      "status": "OFFLINE_EXPORTED_NOT_IMPORTED_IN_PC2",
+      "blender_roundtrip": "PASS"
+    },
+    {
+      "name": "rt_shell_service",
+      "triangles": 482,
+      "dimensions_m": [
+        6.1,
+        5.288,
+        4.345
+      ],
+      "file": "rt_shell_service.glb",
+      "bytes": 127560,
+      "status": "OFFLINE_EXPORTED_NOT_IMPORTED_IN_PC2",
+      "blender_roundtrip": "PASS"
+    }
+  ],
+  "van_instances_in_preview": 3,
+  "actual_vans_placed_in_pc2": 0,
+  "light_color": "#FFFFFF",
+  "accent_blue": "#244CFF",
+  "accent_red": "#E10616"
+}

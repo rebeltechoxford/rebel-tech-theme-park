@@ -1,0 +1,61 @@
+﻿{
+    "status":  "SOURCE_ASSETS_VERIFIED_AND_MEDIA_STAGED",
+    "music_downloaded":  false,
+    "in_game_placement_verified":  false,
+    "assets":  [
+                   {
+                       "status":  "STAGED_IN_USERMEDIA_NOT_PLACED_IN_GAME",
+                       "sha256":  "230D3058EA14BE19E2EE3D336DC913BBC55F8A37B14171AB8EE04BF3FEED2BAD",
+                       "file":  "RT_GRID_CAFE.png",
+                       "bytes":  76729
+                   },
+                   {
+                       "status":  "STAGED_IN_USERMEDIA_NOT_PLACED_IN_GAME",
+                       "sha256":  "2479E1E69EF68E3AEE72FF3C227949C37F759D55B49BC47E5E3DF2DFFF24216B",
+                       "file":  "RT_GRID_FOOD.png",
+                       "bytes":  73786
+                   },
+                   {
+                       "status":  "STAGED_IN_USERMEDIA_NOT_PLACED_IN_GAME",
+                       "sha256":  "B749807A23E2FE19EA15840D5A7B874AF337A61CE5F8A8A105AA477940195E30",
+                       "file":  "RT_GRID_GATE.png",
+                       "bytes":  76454
+                   },
+                   {
+                       "status":  "STAGED_IN_USERMEDIA_NOT_PLACED_IN_GAME",
+                       "sha256":  "A2F9B4603E122A2E00CC2C034463303D9D90EEF316DED5E06A46186A24354D0A",
+                       "file":  "RT_GRID_HERO_ORIGINAL.jpg",
+                       "bytes":  402837
+                   },
+                   {
+                       "status":  "STAGED_IN_USERMEDIA_NOT_PLACED_IN_GAME",
+                       "sha256":  "B359483491109684ED9F88D16F29EF40EFA7B043268859934587C9AB439682C2",
+                       "file":  "RT_GRID_LOGO_ORIGINAL.png",
+                       "bytes":  975557
+                   },
+                   {
+                       "status":  "STAGED_IN_USERMEDIA_NOT_PLACED_IN_GAME",
+                       "sha256":  "8A3CEE86A36B391317BBCD655BDF9ABF9CD2720635F1DB49E40F74A21688E522",
+                       "file":  "RT_GRID_RESTAURANT.png",
+                       "bytes":  75540
+                   },
+                   {
+                       "status":  "STAGED_IN_USERMEDIA_NOT_PLACED_IN_GAME",
+                       "sha256":  "17D713DC9D85017C86CD849D03445A14EE119126B2C8CB5DC669F1EA52BDAF96",
+                       "file":  "RT_GRID_SERVICE.png",
+                       "bytes":  75042
+                   },
+                   {
+                       "status":  "STAGED_IN_USERMEDIA_NOT_PLACED_IN_GAME",
+                       "sha256":  "3B8E7D0A983546DC02DB64B96902E29FA2218B042B28EDDD83CE12F0EFECF1D4",
+                       "file":  "RT_GRID_SHOP.png",
+                       "bytes":  76257
+                   },
+                   {
+                       "status":  "STAGED_IN_USERMEDIA_NOT_PLACED_IN_GAME",
+                       "sha256":  "92B4F91A07ABFA2D9B64000F835BEA2C5AF43ED7A732C73C17D99034467A4A74",
+                       "file":  "RT_GRID_TOILETS.png",
+                       "bytes":  77234
+                   }
+               ]
+}
