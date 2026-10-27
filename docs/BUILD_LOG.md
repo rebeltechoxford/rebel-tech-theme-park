@@ -39,3 +39,10 @@
 - **Custom models:** third-party **KMods Converter** claims support for Blender/FBX/GLB to PC2 scenery packs, dependent on ACSE/ForgeUtils. Installer is unsigned; no such mod has been installed or trusted automatically.
 - **Document updates:** README.md and AGENTS.md updated for PC2. New docs/PC2_PIPELINE.md describes vanilla-first plan and optional mod risk gate. PC1 docs/TMT_PIPELINE.md archived conceptually without deleting it.
 - **Next:** confirm PC2 is installed on Raven, test a vanilla sandbox save and load, then adapt original gateway into a single-object Blender/GLB source candidate. Only consider mod installation after a safety/compatibility check.
+
+## 2026-10-27 — PC2 Gateway GLB source candidate exported on Raven
+- **New generator:** blender/prepare_pc2_gateway.py extracts just the original highest-detail Gateway mesh (not 6 duplicated LOD objects), reloads/packs source PNGs, and exports an embedded GLB and cleaned .blend under ignored build/pc2/ on D:.
+- **Validation:** PC2_GATEWAY_EXPORT_PASS in Blender 4.5.3 LTS after independent clean-scene GLB import. Exactly one mesh, 6,520 triangles, UVs, five materials; bounds 7.55 × 0.86 × 5.54m. GLB 265,936 bytes.
+- **Troubleshooting:** Blender images load lazily on reopen, so source textures were explicitly reloaded and pixel arrays touched before packing. That fixed the initial unsuccessful validation runs.
+- **Not yet accomplished:** PC2 actual game launch, KMods/ACSE/ForgeUtils mod installation, converted scenery, park save, or in-game screenshot. Model import and workshop sharing are unverified.
+- **Next:** confirm game installation when purchase/download is complete; test unmodified sandbox save/reload before considering a modded scenery test.
