@@ -114,3 +114,7 @@
 - Both Notion dream-board image uploads were visually inspected; reference copies retained locally. Approved masterplan roster and every-building-custom standard remain binding.
 - Reloaded Exit Repair 12 successfully; 360 exit warning remained absent. Added public 5m cross-connection and cleaned failed Teacups connector pieces. Teacups exit remains unresolved; no new coaster or long queue claimed.
 - Saved Access Audit 13 and verified independent D: backup SHA256 eac2dda45b2ddd36261bbc474a239564d942c246506a6d50a5dcd3f5629a126a. See docs/checkpoints/2026-10-27-dream-board-continuation.md. Current control/attachment reliability prevents efficient further building; avoid repeated guesses against owner credit budget.
+
+## 2026-10-27 — Work Mode grid import trial
+Four original models converted into native pack; incomplete ACSE dependency blocked runtime. Launch crashed before menu; new mod folders moved out of ovldata, preserved on D:. No ground/path/skyline placement claimed. See docs/GRID_BASE_IMPORT_TRIAL.md. Existing blank and old saves preserved.
+
