@@ -63,6 +63,8 @@ Match the supplied reference silhouette, high roof, long body, roof rack/solar-t
 
 ## Every guest building gets a Rebel Tech shell
 
+**Owner clarification: EVERY building is custom, not a stock prefab with a new logo.** Follow [CUSTOM_BUILDING_STANDARD.md](CUSTOM_BUILDING_STANDARD.md) for unique architecture, real source-logo usage, substantial logical queues, and access tests. This includes ride stations, queue halls, entrances, shops, food/drink, restaurants, toilets, aid, staff facilities, utilities and pool facilities, including visible roofs/rears. Functional game cores may remain inside original piece-built shells; all guest-visible default themed exteriors are temporary until replaced. The seven latest owner-supplied references are inventoried in [RT_REFERENCE_MANIFEST.json](RT_REFERENCE_MANIFEST.json). Generated park illustrations are concept art, not in-game evidence. Path/queue/exit repairs and observed guest cycles must pass before expanding or dressing an attraction.
+
 Functional PC2 shops/toilets/restaurants remain inside custom original exteriors. Custom appearance must not break their working doorway/counter or paths.
 - BYTE BITE: food court / existing hotdog and sushi counters.
 - OVERCLOCK CAFE: drinks and coffee.
