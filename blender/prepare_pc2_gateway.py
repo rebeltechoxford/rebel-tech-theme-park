@@ -66,13 +66,21 @@ if max(dims) > 8.1:
 missing_images = []
 for image in bpy.data.images:
     if image.source == "FILE":
-        try:
-            if not image.has_data:
-                missing_images.append(image.name)
-        except Exception:
-            missing_images.append(image.name)
+        # Blender may lazily unload image pixels when reopening a .blend.
+        # The previous build retains the original PNGs on D:, so reload them
+        # explicitly before packing and exporting the standalone candidate.
+        texture = ROOT / "build" / "tmt" / "rt_world_gateway" / f"{image.name}.png"
+        if not texture.is_file():
+            missing_images.append(str(texture))
+            continue
+        image.filepath = str(texture)
+        image.reload()
+        if not image.has_data:
+            missing_images.append(str(texture))
+        else:
+            image.pack()
 if missing_images:
-    raise RuntimeError(f"Missing source texture images: {missing_images}")
+    raise RuntimeError(f"Missing or unreadable source textures: {missing_images}")
 
 bpy.ops.file.pack_all()
 blend_path = OUTPUT / "rebel_tech_world_gateway_pc2_candidate.blend"
