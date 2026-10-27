@@ -23,3 +23,11 @@
 - **Preview:** `docs/images/gateway-v0.1.jpg` committed to GitHub as a visual prototype. Render is not an in-game screenshot.
 - **Constraints:** Only Blender 2.79 is explicitly on Frontier's historical tested-version list. Blender 4.5 export has NOT yet been accepted/rejected by Frontier's conversion service.
 - **Blocked acceptance test:** Owner-authorized Steam sign-in on Frontier's website, upload ZIP + preview, download compiled `.pcugc`, move to Planet Coaster TMT folder, place in-game and save/reload.
+
+## 2026-10-27 — Repeatability and game-control preparation
+- **Build repeatability:** `scripts/build_gateway.ps1` was executed on Raven and successfully regenerated the Blender source, FBX, textures, Toolkit upload ZIP, preview, and OFFLINE validation report from a clean background Blender session.
+- **Local automation environment:** isolated Python virtual environment at `D:\RebelTechWorld\.venv`; installed `mss 10.2.0` to enable window-only screenshot testing without using C: for project packages.
+- **Read-only GUI probe:** `scripts/game_window_probe.py` tested and reported `GAME_NOT_RUNNING`, consistent with Planet Coaster not being launched yet. No screenshots, clicks, gameplay or GUI construction were executed.
+- **Owner handoff:** `scripts/open_toolkit_upload.ps1` launched the official Frontier website and the local ZIP/preview folder on Raven. Steam sign-in/online conversion is still outstanding.
+- **Disk check after setup:** C: 22.51 GiB free; D: 316.68 GiB free.
+- **Next:** complete Toolkit conversion and in-game save/reload test, then investigate supervised automation after the game is running.
