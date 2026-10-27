@@ -102,3 +102,10 @@
 - Created a fresh non-overwriting D: snapshot of all ten existing park saves and independently matched every SHA-256; private manifest retained with backups.
 - Active coaster-queues-20261027-C lease respected: no GUI inputs, game reset/load/close, controller bypass or edits to other sessions' dirty files. Safe handoff requested locally. Monitor capture showed ChatGPT foreground; no current game-view claim made.
 - No new construction or guest tests claimed. See docs/checkpoints/2026-10-27-work-resume-preflight.md for verified evidence and next acceptance step.
+
+
+## 2026-10-27 — Work: actual 360 exit repair, separately saved
+- Acquired explicitly released control lease; preserved live park as Work Preserve 11 and hash-verified D: copy.
+- Placed normal 5m route at actual lower 360 exit attachment. Specific exit warning disappeared; screenshot committed. Live pre-repair summary showed 252 lifetime guests, but no three-cycle test claimed.
+- Teacups connector attempts did not clear its exit warning. Sky Watcher/Overclock access and ride staffing remain open. No new coasters, long queues or completed themed district claimed.
+- Saved RT Grid Exit Repair 12 (4,615,056 bytes); independent D: copy SHA256 matched. Reload remains untested. Normal game quit initiated before offline handoff. See docs/checkpoints/2026-10-27-work-exit-repair.md.
