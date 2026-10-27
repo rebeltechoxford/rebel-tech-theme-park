@@ -19,3 +19,6 @@ These are scenery panels, not terrain paints or registered path materials. Nativ
 Obtain PC2 ACSE from the official Nexus page after owner signs in, review/scan package, restore isolated mod folders, prove vanilla and modded launches, then place one tile at correct height and verify before covering the sandbox. Do not activate incomplete mods again.
 
 Official sources: https://www.nexusmods.com/planetcoaster2/mods/59 ; https://www.nexusmods.com/planetcoaster2/mods/1 ; https://github.com/Distantz/ForgeUtils
+
+Vanilla rollback verification: reached menu and loaded blank successfully. Guest Square Flagstones colour #244CFF, queue colour #E10616, independently retained while switching modes. No reload persistence claimed. Saved separate Rebel Tech Grid Path Setup 01-670F38CE.park2, SHA256 4A354F2AD3F04148B9894F0C907CE46863BB5F82015DFDEC02DD76D877BE017C; independent D: backup matches. Normal quit confirmed process stopped. No geometry placed.
+
