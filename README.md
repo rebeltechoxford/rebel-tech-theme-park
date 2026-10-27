@@ -2,7 +2,7 @@
 
 **Rebel Tech World** is a community creative project to design and build a playable, technology-themed amusement park in **Planet Coaster 2** on the Windows PC **Raven**.
 
-> **Active project (2026-10-27): Planet Coaster 2.** The owner pivoted from PC1. The Gateway geometry is preserved; a clean **single-object PC2 candidate GLB** was exported on Raven and passed a Blender GLB round-trip test. This is *not* proof of PC2 in-game support; no PC2 save or imported model is verified yet.
+> **Build status (2026-10-27): Planet Coaster 2 running on Raven.** Created a functioning vanilla sandbox park, built an 8m entrance avenue with a T-junction, verified guests using the path, and saved multiple local checkpoints (original, Entrance 01, Ride Test 02) with verified backups on D:. A built-in **360 Power** flat ride is placed but **CLOSED** pending a valid queue connection and power. The original custom Gateway GLB passed Blender offline validation but has **not** been imported into PC2.
 
 ## Vision
 
@@ -30,7 +30,7 @@ Names, layout, and ride details are proposals subject to gameplay testing.
 
 ## Target environment
 
-- **Game:** **Planet Coaster 2** for Windows, sandbox mode. Purchase/install underway; not yet confirmed running on Raven.
+- **Game:** **Planet Coaster 2** for Windows, sandbox mode. Installed on D:, launched successfully on Raven and vanilla park save/reload verified.
 - **Host PC:** Raven; Windows 11 Pro, inspected October 27, 2026.
 - **Workspace:** `D:\RebelTechWorld` to reduce use of C:; check capacity before setup. Game/system caches and saves may still occupy C:.
 - **3D authoring:** Blender 4.5.3 LTS confirmed. Preserve old gateway source and adapt a standalone model for PC2.
@@ -53,11 +53,12 @@ Names, layout, and ride details are proposals subject to gameplay testing.
 - [x] Connect to Raven with permission and inspect C:/D: available space, Planet Coaster, Blender, and build prerequisites. (C: 22.6 GiB free; D: 316.7 GiB free.)
 - [x] Create the local `D:\RebelTechWorld` workspace and Git clone.
 - [x] Create original scenery in Blender; export and verify **PC1-format** FBX/ZIP offline (retained solely as reusable source).
-- [ ] Install and launch **Planet Coaster 2** on Raven; save/reload a vanilla sandbox park.
+- [x] Install and launch **Planet Coaster 2** on Raven; create/save/reload a vanilla sandbox park.
 - [x] Export a single-object Blender/GLB gateway **candidate** and validate in Blender: 6,520 triangles, five materials, 7.55 × 0.86 × 5.54 m, 265,936-byte GLB; game import still outstanding.
 - [ ] Review optional community KMods Converter / ACSE / ForgeUtils for security, game-version compatibility and backups; test custom scenery only if approved.
-- [ ] Test reproducible UI automation for a small entrance plaza.
-- [ ] Save, close, reopen, and validate the first playable checkpoint.
+- [x] Create and validate safe, foreground-verified mouse/keyboard/screenshot automation on Raven (`scripts/pc2_desktop_control.py`); build a straight 8m guest path and T-junction. The visual/scenery-heavy entrance plaza remains to be designed.
+- [x] Save and reload the original vanilla sandbox park; create two further save checkpoints and SHA-256-verified backups on D:.
+- [ ] Complete ride entrance queue, exit connection and power for built-in 360 Power flat ride; open and test it in-game.
 - [ ] Create a measured construction roadmap for all districts, including **Cooling Loop** waterpark.
 
 ## Planned repository structure
