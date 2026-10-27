@@ -96,3 +96,9 @@
 - **Park evidence:** observed the existing District Spine checkpoint as the latest .park2 save at initial preflight (4,427,909 bytes). No new operational ride result or completed no-grass makeover was verified in this branding session. The end-of-day UI observed earlier still reported zero average rides per guest; OPEN labels are not a boarding test.
 - **Music:** likely Hans Zimmer's Mombasa from Inception. No matching file in PC2 UserAudio, no music downloaded/purchased, no DRM bypass, no public audio redistribution. Needs an authorized local recording.
 - **Next:** integrate native logo billboards in a coordinated game session; replace grass/tropical scenery district-by-district with dark surfaces and white lighting; fit native facilities into custom shells; verify guest access and complete flagship rides one at a time.
+
+## 2026-10-27 — Work resume: actual save inventory and verified preservation
+- Read latest Notion first and inspected Raven via Desktop Commander. Latest actual saved checkpoint remains RT Grid 360 Access 10 (4,610,796 bytes); later live Teacups edits are potentially unsaved per handoff.
+- Created a fresh non-overwriting D: snapshot of all ten existing park saves and independently matched every SHA-256; private manifest retained with backups.
+- Active coaster-queues-20261027-C lease respected: no GUI inputs, game reset/load/close, controller bypass or edits to other sessions' dirty files. Safe handoff requested locally. Monitor capture showed ChatGPT foreground; no current game-view claim made.
+- No new construction or guest tests claimed. See docs/checkpoints/2026-10-27-work-resume-preflight.md for verified evidence and next acceptance step.
