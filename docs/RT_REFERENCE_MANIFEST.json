@@ -1,0 +1,18 @@
+{
+  "project": "Rebel Tech World: THE REBEL GRID",
+  "date": "2026-10-27",
+  "owner_requirement": "Theme every building; no stock finished building exteriors.",
+  "source_kind": "Seven original images supplied by owner in this conversation",
+  "preservation": "Original bytes retained in conversation reference bundle without re-encoding or cropping",
+  "bundle_name": "RT_Brand_Sources_7_Originals.zip",
+  "scope_note": "The full source bundle is a conversation artifact, not automatically available on Raven. Only references 6 and 7 have matching existing project paths. This inventory does not prove in-game assignment. Generated park illustrations are excluded.",
+  "sources": [
+    {"reference":1,"key":"server_room_mood","original_filename":"0783CC15-282A-49D1-AE0B-1C1706BE6EF3.jpeg","dimensions_px":[709,1536],"bytes":381291,"sha256":"ccd96c0dbadc762e229ef189d586f8f713f66e76be650a957542c00fdae0acfa","design_role":"Large feature/mood reference; not a replacement for the actual logo","raven_source_path":null,"in_game_assignment":"NOT_VERIFIED"},
+    {"reference":2,"key":"metallic_rt","original_filename":"E033131D-04A8-4671-9D36-5143DD6113C3(4).png","dimensions_px":[1254,1254],"bytes":754673,"sha256":"f791b91c0d375520d5433da8f1336338a09eef124ccf533519b037a919526080","design_role":"Large hero signage","raven_source_path":null,"in_game_assignment":"NOT_VERIFIED"},
+    {"reference":3,"key":"atomic_red","original_filename":"BF6D08A0-B30B-4156-B9B0-15DAEA511F5E(1).jpeg","dimensions_px":[1254,1254],"bytes":216407,"sha256":"279a8c8a3d54bed37947a8c2f56691558b3882c4355785324f6b575102703086","design_role":"Red panels; navy/white contrast","raven_source_path":null,"in_game_assignment":"NOT_VERIFIED"},
+    {"reference":4,"key":"atomic_navy","original_filename":"2611A202-133A-4FE9-AFC3-C880F8A6C32E(1).jpeg","dimensions_px":[1254,1254],"bytes":216747,"sha256":"ee1bb18f821bedf99352d2307f22f6268817bbd57def756f37fcd2c20f7dcfaf","design_role":"Dark panels; white/red contrast","raven_source_path":null,"in_game_assignment":"NOT_VERIFIED"},
+    {"reference":5,"key":"atomic_white","original_filename":"CA7AFB5D-5211-4B9F-BB32-236EB1306899(3).png","dimensions_px":[1254,1254],"bytes":889638,"sha256":"d180bc58085461945bdc8a92d91d40e63d9aecad3d35423fa168964296aefc17","design_role":"White/gray panels; navy/red contrast","raven_source_path":null,"in_game_assignment":"NOT_VERIFIED"},
+    {"reference":6,"key":"rebel_tech_hero","original_filename":"0EEE2657-338E-4125-9422-787814FFF81B(3).jpeg","dimensions_px":[1536,1024],"bytes":402837,"sha256":"a2f9b4603e122a2e00cc2c034463303d9d90eef316ded5e06a46186a24354d0a","design_role":"Main entrance or large showcase display","raven_source_path":"assets/branding/grid-v1/rebel-tech-hero-original.jpg","in_game_assignment":"NOT_VERIFIED"},
+    {"reference":7,"key":"rt_circle","original_filename":"5C5FF6A0-948E-42C7-8B06-AC27CF074124(9).png","dimensions_px":[1254,1254],"bytes":975557,"sha256":"b359483491109684ed9f88d16f29ef40efa7b043268859934587c9ab439682c2","design_role":"Repeat-use monogram for gates, stations and wayfinding","raven_source_path":"assets/branding/grid-v1/rt-circle-original.png","in_game_assignment":"NOT_VERIFIED"}
+  ]
+}

@@ -3,6 +3,10 @@
 
 **ACTIVE GAME TARGET: Planet Coaster 2** (owner pivoted October 27, 2026). Review README.md, docs/PC2_PIPELINE.md and docs/BUILD_LOG.md before doing work.
 
+## Mandatory custom-building requirement
+
+Read [docs/CUSTOM_BUILDING_STANDARD.md](docs/CUSTOM_BUILDING_STANDARD.md) before any theming. Every visible building, station, queue hall, toilet, staff/utility and pool facility needs an original RT architectural composition. A recolored stock prefab, identical box with a different sign, or offline GLB render is not a finished building. Retain supported functional cores and native construction pieces, but replace or fully conceal default visible themed shells without obstructing real paths/doors/ride clearance. Use exact supplied logo artwork with appropriate red/navy/white contrast. Source-image inventory: [docs/RT_REFERENCE_MANIFEST.json](docs/RT_REFERENCE_MANIFEST.json). **Path, queue, exit and staff repairs stay first; prove guest arrival, boarding and return before expansion, and retest after theming.** Generated park concepts are never evidence of in-game completion.
+
 ## Raven and workspace
 - Authorized PC: Raven, Windows 11 Pro; Desktop Commander when connected.
 - Clone and build directory on D: drive: D:\RebelTechWorld\rebel-tech-theme-park.
