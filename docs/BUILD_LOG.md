@@ -46,3 +46,9 @@
 - **Troubleshooting:** Blender images load lazily on reopen, so source textures were explicitly reloaded and pixel arrays touched before packing. That fixed the initial unsuccessful validation runs.
 - **Not yet accomplished:** PC2 actual game launch, KMods/ACSE/ForgeUtils mod installation, converted scenery, park save, or in-game screenshot. Model import and workshop sharing are unverified.
 - **Next:** confirm game installation when purchase/download is complete; test unmodified sandbox save/reload before considering a modded scenery test.
+
+## 2026-10-27 — PC2 install status and performance baseline
+- **Steam state when checked:** D:\SteamLibrary\steamapps\common\Planet Coaster 2 directory was created; Steam appmanifest_2688950.acf exists but the game folder contained no EXE/data files yet.
+- **Reported by Steam manifest at inspection:** BytesToDownload ~13,900,636,080; BytesDownloaded 0; game installation is **not yet complete**. Do not attempt game launch until Steam finishes.
+- **Raven hardware:** Intel Core i7-9700K (8 cores), NVIDIA GeForce GTX 1060 6GB, ~16GB RAM. PC2's official listed minimum includes a GTX 1060 (6GB VRAM) and 16GB RAM, so benchmark actual performance before planning excessive scenery counts, park complexity or water-simulation loads.
+- **Next:** wait for actual Steam install completion; then perform vanilla startup/sandbox/save/reload test before enabling any third-party mods.
