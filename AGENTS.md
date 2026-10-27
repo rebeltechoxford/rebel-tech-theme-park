@@ -6,7 +6,9 @@
 - Authorized PC: Raven, Windows 11 Pro; Desktop Commander when connected.
 - Clone and build directory on D: drive: D:\RebelTechWorld\rebel-tech-theme-park.
 - Blender 4.5.3 LTS was inspected and used successfully; Planet Coaster 1 is installed but is no longer our target.
-- Planet Coaster 2 purchase/install was still underway at last check; do not claim PC2 has run or any custom assets work in-game until tested.
+- PC2 is installed; an original tropical sandbox park with working 8m guest boulevard and T-junction plus a CLOSED flat ride was built and saved in three separate checkpoints. Vanilla save/reload was verified.
+- **Current request:** The game was cleanly QUIT on Raven. Keep PC2 **CLOSED** for offline research, scripts, documentation and Blender builds. Relaunch only when an actual in-game construction/validation task needs it.
+- An original three-piece entrance scenery kit is published in `assets/pc2/entrance-kit-v0.1/`, Blender/GLB-tested OFFLINE but **not** imported into PC2.
 - Preserve the existing gateway .blend, source code, and preview on D:; no deletion or destructive migration.
 
 ## PC2-specific approach
@@ -26,12 +28,12 @@
 - Do not publish machine-private details, credentials, Steam data, game binaries, proprietary saves or unlicensed Sketchfab models.
 - Avoid undocumented game-save modifications, bypassing OS security warnings, or destructive installs.
 
-## First acceptance test
-- PC2 installed and running.
-- A minimal vanilla park opens, saves and reloads.
-- Gateway source adapted and exported as one standalone object.
-- Third-party converter vetted before optional installation.
-- Model appears in-game with correct orientation, scale, textures, and saves/reloads if approved.
+## Current acceptance state
+- COMPLETE: PC2 installed and launched; sandbox park saved/reloaded; guests use the entrance avenue; three independent game save checkpoints preserved and backed up on D:.
+- COMPLETE, Blender-only: Gateway GLB and three entrance kit GLBs roundtrip-validated as original scenery model candidates.
+- OPEN BLOCKER: built-in 360 Power flat ride CLOSED, missing connected queue and power (0/36); UI showed `Paths cannot cross`. Refer to [docs/RIDE_AND_UTILITIES_RUNBOOK.md](docs/RIDE_AND_UTILITIES_RUNBOOK.md) before the next game session.
+- NOT ATTEMPTED: KMods/ACSE/ForgeUtils installation, PC2 custom model import or a completed powered ride. Do not claim completion without evidence.
+- NEXT interactive milestone: functional ride with guests boarding, followed by a new named in-game save and a D: SHA-verified backup.
 
 Project hub: https://app.notion.com/p/4066b61e436e8102931fe868f8ac2ee3?pvs=204
 PC1 legacy notes: docs/TMT_PIPELINE.md
