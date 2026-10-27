@@ -52,3 +52,9 @@
 - **Reported by Steam manifest at inspection:** BytesToDownload ~13,900,636,080; BytesDownloaded 0; game installation is **not yet complete**. Do not attempt game launch until Steam finishes.
 - **Raven hardware:** Intel Core i7-9700K (8 cores), NVIDIA GeForce GTX 1060 6GB, ~16GB RAM. PC2's official listed minimum includes a GTX 1060 (6GB VRAM) and 16GB RAM, so benchmark actual performance before planning excessive scenery counts, park complexity or water-simulation loads.
 - **Next:** wait for actual Steam install completion; then perform vanilla startup/sandbox/save/reload test before enabling any third-party mods.
+
+## 2026-10-27 — Planet Coaster 2 installed and launched
+- **Steam evidence:** `D:\SteamLibrary\steamapps\common\Planet Coaster 2\PlanetCoaster2.exe` exists (317,260,288 bytes). Steam app manifest for app 2688950 reports StateFlags=4 and BytesDownloaded=13,900,636,080/13,900,636,080.
+- **Launch:** sent official Steam URI `steam://rungameid/2688950` and verified `PlanetCoaster2` PID 50632 started with a responsive, visible 1920×1080 window.
+- **GUI probe:** reused the existing read-only window probe locally with PC2 executable name. Result `GAME_WINDOW_FOUND`, foreground=false. No mouse/keyboard game inputs were sent, no screenshots of game content were captured, and no park save/reload was verified.
+- **Next:** get PC2 foreground in an interactive session, capture/review the game state, create vanilla sandbox park, and save/reopen it. Avoid third-party mods until the baseline is proven.
