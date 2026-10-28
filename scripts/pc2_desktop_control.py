@@ -42,11 +42,22 @@ u.mouse_event.argtypes = (wintypes.DWORD, wintypes.DWORD, wintypes.DWORD, wintyp
 u.keybd_event.argtypes = (ctypes.c_ubyte, ctypes.c_ubyte, wintypes.DWORD, ctypes.c_size_t)
 
 def context():
+    # Short-lived cooperative lease: concurrent agents must not click the same UI.
+    # This never blocks the owner's physical mouse/keyboard and auto-expires.
+    lease_path = Path(__file__).resolve().parents[1] / 'build' / 'coordination' / 'pc2-control-lease.json'
+    if lease_path.is_file():
+        lease = json.loads(lease_path.read_text(encoding='utf-8-sig'))
+        if float(lease.get('expires_unix', 0)) > time.time():
+            if os.environ.get('RT_PC2_CONTROLLER') != lease.get('owner'):
+                raise RuntimeError('PC2 GUI is leased by another supervised session for PATH REPAIR. '
+                                   'Do not bypass or issue parallel desktop inputs; continue offline work. '
+                                   'The lease auto-expires; see build/coordination/pc2-control-lease.json.')
     hwnd = u.GetForegroundWindow()
     length = u.GetWindowTextLengthW(hwnd)
     name = ctypes.create_unicode_buffer(length + 1)
     u.GetWindowTextW(hwnd, name, length + 1)
-    if "Planet Coaster 2" not in name.value:
+    if name.value != "Planet Coaster 2":
+        # Exact match: other windows (editors, chats) may mention the game in their titles.
         # A newly started terminal can steal focus. Explicitly focus only
         # the verified, exact-title game window, then re-check before input.
         u.FindWindowW.argtypes = (wintypes.LPCWSTR, wintypes.LPCWSTR)
@@ -69,7 +80,7 @@ def context():
         length = u.GetWindowTextLengthW(hwnd)
         name = ctypes.create_unicode_buffer(length + 1)
         u.GetWindowTextW(hwnd, name, length + 1)
-    if "Planet Coaster 2" not in name.value:
+    if name.value != "Planet Coaster 2":
         raise RuntimeError("Input blocked: foreground window is not Planet Coaster 2 (got title %r)" % name.value)
     pid = wintypes.DWORD()
     u.GetWindowThreadProcessId(hwnd, ctypes.byref(pid))
@@ -111,15 +122,17 @@ def click(ctx, x, y):
 def key(ctx, kname):
     keys = {"ESC":0x1b, "ENTER":0x0d, "SPACE":0x20, "TAB":0x09, "F1":0x70,
             "F2":0x71, "F3":0x72, "F4":0x73, "BACKSPACE":0x08, "LEFT":0x25,
-            "RIGHT":0x27, "UP":0x26, "DOWN":0x28}
+            "RIGHT":0x27, "UP":0x26, "DOWN":0x28,
+            "HOME":0x24, "PAGEUP":0x21, "PAGEDOWN":0x22}
     vk = keys.get(kname.upper())
     if vk is None and len(kname)==1 and kname.isalnum():
         vk = ord(kname.upper())
     if vk is None:
         raise ValueError("Unsupported key: " + kname)
-    u.keybd_event(vk, 0, 0, 0)
+    scan = u.MapVirtualKeyW(vk, 0)  # PC2 ignores letter keys sent without a hardware scan code
+    u.keybd_event(vk, scan, 0, 0)
     time.sleep(0.10)
-    u.keybd_event(vk, 0, 0x0002, 0)
+    u.keybd_event(vk, scan, 0x0002, 0)
 
 def type_replace(ctx, value):
     # Replace the text in a text entry that has already been focused in-game.
@@ -161,7 +174,7 @@ def capture(ctx):
 
 def main():
     pa=argparse.ArgumentParser()
-    pa.add_argument("action", choices=["status","click","capture","key","scroll","drag","type-replace","move"])
+    pa.add_argument("action", choices=["status","click","capture","key","key-hold","scroll","drag","drag-right","drag-middle","type-replace","move"])
     pa.add_argument("params", nargs="*")
     a=pa.parse_args()
     ctx=context()
@@ -173,24 +186,38 @@ def main():
         point(ctx,x,y)
     elif a.action=="key":
         key(ctx,a.params[0])
+    elif a.action=="key-hold":
+        value=a.params[0].upper()
+        if len(value)!=1 or not ("A"<=value<="Z"):
+            raise ValueError("Hold key must be a single letter A-Z")
+        seconds=min(4.0,max(.1,float(a.params[1])))
+        vk=ord(value)
+        u.keybd_event(vk,0,0,0)
+        try:time.sleep(seconds)
+        finally:u.keybd_event(vk,0,0x0002,0)
     elif a.action=="type-replace":
         type_replace(ctx, " ".join(a.params))
     elif a.action=="scroll":
         n=int(a.params[0])
         u.mouse_event(0x0800,0,0,(n*120)&0xffffffff,0)
-    elif a.action=="drag":
+    elif a.action in ("drag","drag-right","drag-middle"):
         x1,y1,x2,y2=map(int,a.params[:4])
-        duration=float(a.params[4]) if len(a.params)>4 else 1.0
+        duration=min(3,max(.12,float(a.params[4]) if len(a.params)>4 else 1.0))
+        down,up={"drag":(0x0002,0x0004),
+                 "drag-right":(0x0008,0x0010),
+                 "drag-middle":(0x0020,0x0040)}[a.action]
         point(ctx,x1,y1)
         time.sleep(.12)
-        u.mouse_event(0x0002,0,0,0,0)
-        steps=max(5,int(duration*25))
-        for i in range(steps):
-            x=round(x1+(x2-x1)*(i+1)/steps)
-            y=round(y1+(y2-y1)*(i+1)/steps)
-            point(ctx,x,y)
-            time.sleep(duration/steps)
-        u.mouse_event(0x0004,0,0,0,0)
+        u.mouse_event(down,0,0,0,0)
+        try:
+            steps=max(5,int(duration*25))
+            for i in range(steps):
+                x=round(x1+(x2-x1)*(i+1)/steps)
+                y=round(y1+(y2-y1)*(i+1)/steps)
+                point(ctx,x,y)
+                time.sleep(duration/steps)
+        finally:
+            u.mouse_event(up,0,0,0,0)
     result={"action":a.action,"game_pid":ctx["pid"],"resolution":[ctx["width"],ctx["height"]],"ok":True}
     if a.action=="capture":
         result.update(capture(ctx))

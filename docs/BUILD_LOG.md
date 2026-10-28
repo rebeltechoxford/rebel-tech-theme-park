@@ -118,3 +118,37 @@
 ## 2026-10-27 — Work Mode grid import trial
 Four original models converted into native pack; incomplete ACSE dependency blocked runtime. Launch crashed before menu; new mod folders moved out of ovldata, preserved on D:. No ground/path/skyline placement claimed. See docs/GRID_BASE_IMPORT_TRIAL.md. Existing blank and old saves preserved.
 
+
+
+## 2026-10-27 - THE GRID biome v1 (Claude session) and fresh Rebel Tech Grid park
+- Owner reset: all old parks deleted, fresh start. Old KMods/ForgeUtils mods removed; ovldata now holds ACSE 0.729 plus our own Mod_KMods_rebel_tech_tron_grid (Tron tiles from blender/build_tron_grid.py).
+- Shutdown crash (PlanetCoaster2.exe+0x14AEE62) was bisected to ACSE alone. Saves and reloads are unaffected. A 442 m asset crashes at startup (0xFDEAD); 96 m loads fine.
+- Built a custom Grid biome with OpenNaja cobra-tools (scripts/pc2_grid_biome.py). It overrides the Temperate biome in place, with originals backed up under build/backups/pc2/temperate-*-original:
+  - Temperate.ovl: every terrain paint layer is repainted as Tron grid (black + RT blue #244CFF; red, white, navy and solid brushes as accents). Grass and flower detail is made transparent; macro tint and detail normals are neutralised.
+  - TemperateWorld.ovl: the skirt heightmap is flattened and all 64,324 skirt trees are removed.
+  - TerrainSkirts/TemperateSandbox.bakedHeightMap: replaced with a flat v0 bake at park level. Rewriting the shipped v2 bake crashed the game (0xFDEAD), which was recovered immediately.
+- New sandbox "Rebel Tech Grid" (Creative, Temperate = THE GRID): starter trees bulk-deleted, wind/rain/storms/snow off, sun fixed at 12:00 am. Saved as Rebel Tech Grid-D813563F.park2; D: copy SHA-256 74c2f650...e4d1 matched. The reload was verified in-game: night grid, no hills or trees.
+- Known limits: terrain has no emissive channel, so the lines read as a lit blue grid rather than true bloom. A few dark terrain mounds and edge trees remain. A Steam "verify files" or game update will restore the stock biome; re-run scripts/pc2_grid_biome.py all (cobra-venv Python, game closed) to reapply it. The restore step undoes it.
+
+## 2026-10-27 - THE GRID look pass: glow, skyline, hidden coaches (Claude session)
+- scripts/pc2_grid_look.py (new): teal Tron colour grade (GameTemperate LUT), stronger cyan bloom, +1.1 EV exposure, teal sky/haze/fog in GameMain/Main.ovl; guest coaches shrunk to 1% so arriving buses are invisible. Originals backed up whole-folder to build/backups/pc2/grid-look-original; "restore" puts them back.
+- Biome terrain lines are now neon cyan (#00E5FF) with a gaussian halo and white-hot core, thicker for distance.
+- ForgeUtils restored from build/backups/pc2/removed-mods-20261027: our pack registers its scenery through it, so the Tron pieces were never in the browser before. Game launches and loads fine with it.
+- New pieces in the Rebel Tech pack (blender/build_tron_skyline.py): RT Grid Tower, RT Grid Skyline A/B, RT Grid Glow Floor (lines-only emissive floor). PC2 scenery scales up to 1000%.
+- Park: edge trees inside the boundary deleted; tower placed at 500% on the far edge, two skyline walls at 400% on the side edges, glow floor at 500% in front. Lighting fixed at 6 pm (emissive pieces bloom; terrain alone cannot emit). Saved and backed up to build/backups/pc2/rebel-tech-grid-20261027-2145 (hash matched).
+- Not done: terrain mounds and red paint patches inside the boundary; trees beyond the boundary on the remaining edges are only partly hidden. Quitting still triggers the known ACSE shutdown crash; close crash_reporter before relaunching.
+
+## 2026-10-28 - Grid city, entry portal, red coaster, nature hidden (Claude session)
+- blender/build_tron_skyline.py rebuilt with detailed buildings (chamfered piers, glass curtain walls, fins, stepped crowns, antennas) plus RT Grid Spire and RT Grid Portal (vortex ring between two pillars carrying the Rebel Tech Grid logo on both faces; logo cropped from the owner's reference into build/references). Textures from blender/make_city_textures.py. All added to the Rebel Tech pack (build/tron-grid/make_pack.py).
+- Portal placed at 300% on the open side of the park between the skyline walls. Spires did not place (to retry).
+- scripts/pc2_hide_nature.py (new): template trees/ferns/bramble/flowers made fully transparent and rocks Grid black, so nature outside the boundary disappears too. Backups in build/backups/pc2/hide-nature-original. Model shrinking failed on trees (wind vertex data), so this works through materials.
+- scripts/pc2_grid_biome.py: every terrain paint layer is now the same cyan grid (template red/blue patches gone) and terrain detail scatter models are shrunk to 1%. Mounds inside the boundary flattened with Flatten to Foundation.
+- scripts/pc2_glow_cars.py (new): channel-1 emissive enabled on all 53 coaster car types; no visible glow in game yet. Backups in build/backups/pc2/glow-cars-original.
+- Coaster test: Twisted Arc placed, all track and car colours set to RT red (#E10616), Sci-Fi music. Rails use an extrusion shader with no emissive input, so rails cannot glow; lighting fixed at 4 pm so red reads while neon edges still show.
+- Saved; backup build/backups/pc2/rebel-tech-grid-20261028-final (hash matched).
+
+## 2026-10-28 - Gloss-black grid fix, dream-board city, test coaster removed (Claude session)
+- Biome: every terrain layer is the cyan grid (auto-paint had wiped it with a black layer); bump/height maps neutralised for gloss black; roughness 55.
+- City rebuilt in dream-board style (armored towers, red/blue neon, RT badges, shopfronts, RT ring monument); same object ids so placed pieces updated. New rt-badge.png texture from assets/branding.
+- Test coaster Twisted Arc and its 103-piece scenery group deleted. Saved 05:47; backup build/backups/pc2/rebel-tech-grid-20261028-city (hash matched). Handoff written to the Notion project hub.
+- Not done: more city blocks in the remaining edge gaps (camera navigation was too costly); outer-boundary terrain ridges.
